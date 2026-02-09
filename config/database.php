@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '192.168.137.28'),
+            'host' => env('DB_HOST', '172.14.1.210'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'kampus'),
             'username' => env('DB_USERNAME', 'leafy'),

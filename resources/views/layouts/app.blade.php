@@ -1,35 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Aplikasi Mahasiswa</title>
+    <title>Sistem Absensi</title>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
 
-    <!-- Font Awesome -->
-    <link 
-      rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+        body{
+            margin:0;
+            font-family:Arial;
+            display:flex;
+        }
+
+        /* SIDEBAR */
+        .sidebar{
+            width:250px;
+            background:#2c3e50;
+            color:white;
+            height:100vh;
+            padding:20px;
+        }
+
+        .logo{
+            font-size:20px;
+            font-weight:bold;
+            margin-bottom:30px;
+        }
+
+        .menu a{
+            display:block;
+            color:white;
+            text-decoration:none;
+            margin:10px 0;
+        }
+
+        .menu a:hover{
+            color:#1abc9c;
+        }
+
+        /* CONTENT */
+        .content{
+            flex:1;
+            padding:20px;
+            background:#f4f6f7;
+        }
+
+    </style>
+
 </head>
 
-<body class="bg-gray-100 min-h-screen">
+<body>
 
-    <!-- Header -->
-    <header class="bg-white shadow mb-8">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center gap-3">
-            <i class="fas fa-book text-xl text-blue-600"></i>
-            <h1 class="text-xl font-bold text-gray-800">
-                Sistem Mahasiswa
-            </h1>
-        </div>
-    </header>
+<div class="sidebar">
 
-    <!-- Content -->
-    <main class="max-w-6xl mx-auto px-6">
-        @yield('content')
-    </main>
+    <div class="logo">
+        LOGO ABSENSI
+    </div>
+
+    <div class="menu">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/mata-kuliah">Mata Kuliah</a>
+        <a href="#">Kelas</a>
+        <a href="#">Absensi</a>
+        <a href="/mahasiswa">Mahasiswa</a>
+        <a href="#">Rekap Absensi</a>
+        <a href="#">Logout</a>
+    </div>
+
+</div>
+
+
+<div class="content">
+
+    @yield('content')
+
+</div>
 
 </body>
 </html>
