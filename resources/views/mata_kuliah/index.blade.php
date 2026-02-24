@@ -17,7 +17,7 @@ Tambah Mata Kuliah
 <table class="w-full border">
 
 <tr class="bg-gray-200">
-<th>ID</th>
+<th>ID Mata Kuliah</th>
 <th>Nama MK</th>
 <th>SKS</th>
 <th>Aksi</th>
@@ -37,14 +37,14 @@ Tambah Mata Kuliah
 '{{ $m->id_mk }}',
 '{{ $m->nama_mk }}',
 '{{ $m->sks }}'
-)" class="text-blue-500">Edit</button>
+)" class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded text-xs">Edit</button>
 
 <form action="/mata-kuliah/{{ $m->id_mk }}" method="POST" class="inline">
 
 @csrf
 @method('DELETE')
 
-<button class="text-red-500">Delete</button>
+<button class="bg-red-400 hover:bg-red-500 text-white px-3 py-1 rounded text-xs">Delete</button>
 
 </form>
 
@@ -65,7 +65,7 @@ Tambah Mata Kuliah
 
 <div class="bg-white p-6 rounded">
 
-<h3 id="title"></h3>
+<h3 id="title"  class="font-bold mb-3"></h3>
 
 <form id="formMK" method="POST">
 
@@ -74,7 +74,7 @@ Tambah Mata Kuliah
 <span id="method"></span>
 
 Nama MK:
-<input type="text" name="nama_mk" id="nama" class="border block mb-2">
+<input type="text" name="nama_mk" id="nama"  class="border block mb-2 w-full">
 
 SKS:
 <input type="number" name="sks" id="sks" class="border block mb-2">
